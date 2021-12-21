@@ -1,4 +1,11 @@
-#abc {
+#text {
+	position: relative;
+	bottom: 0;
+	right: 0;
+}
+
+#circle {
+	position: relative;
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
