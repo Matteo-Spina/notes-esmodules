@@ -1,4 +1,4 @@
 export default (req, res) => {
-  const { name } = "world";
-  res.status(200).send(`Hello ${name}!`);
+	const name = "world";
+	res.status(200).send(`Hello ${name}!`);
 }
