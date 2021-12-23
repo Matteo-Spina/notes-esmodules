@@ -3,15 +3,15 @@ const target = document.getElementById('target');
 
 async function fetchData() {
 	// check for a successful fecth, can throws error
-	const response = await fetch('nothing.json'); // 
+	const response = await fetch('/api/hello'); // 
 	// check response is within 200-299
 	if (!response.ok) {
 		throw new Error('HTTP error, status = ' + response.status);
 	}
 	// check some headers
 	const contentType = response.headers.get('content-type');
-	if (!contentType || !contentType.includes('application/json')) {
-		throw new TypeError("Oops, we haven't got JSON!");
+	if (!contentType || !contentType.includes('text/plain')) {
+		throw new TypeError("content-type is not text/plain");
 	}
 	return true;
 }
