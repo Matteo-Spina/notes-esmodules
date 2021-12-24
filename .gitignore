@@ -2,8 +2,6 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 lerna-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -22,12 +20,23 @@ jspm_packages/
 # Optional REPL history
 .node_repl_history
 
-# Yarn Integrity file
-.yarn-integrity
-
 # dotenv environment variables file
 .env
 .env.test
 
 # vscode
 .vscode
+
+# yarn
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+
+# yarn 2 with Zero-Installs
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
