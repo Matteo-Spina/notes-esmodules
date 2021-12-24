@@ -31,6 +31,7 @@ jspm_packages/
 yarn-debug.log*
 yarn-error.log*
 .yarn-integrity
+.pnp.cjs
 
 # yarn 2 with Zero-Installs
 .yarn/*
