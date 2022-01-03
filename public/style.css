@@ -1,50 +1,51 @@
-#text {
-	position: relative;
-	bottom: 0;
-	right: 0;
+#target {
+  position: relative;
+  bottom: 0;
+  right: 0;
 }
 
-#circle {
-	position: relative;
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	background-color: deepskyblue;
+#square {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* border-radius: 50%; */
+  background-color: white;
 }
 
-header, footer {
-	grid-column: 1 / -1;
-	background-color: deeppink;
+header,
+footer {
+  grid-column: 1 / -1;
+  background-color: deeppink;
 }
 
 main {
-	grid-column: 2 / -2;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  grid-column: 2 / -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
-	min-height: 100vh;
+  min-height: 100vh;
 
-	display: grid;
-	grid-template-columns: 1fr min(80ch, 90%) 1fr;
-	grid-template-rows: [header-start] 5rem [main-start] 1fr [footer-start] 5rem;
-	
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	line-height: 2rem;
-	
-	background-color: antiquewhite;
+  display: grid;
+  grid-template-columns: 1fr min(80ch, 90%) 1fr;
+  grid-template-rows: [header-start] 5rem [main-start] 1fr [footer-start] 5rem;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2rem;
+
+  background-color: antiquewhite;
 }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
-	margin: 0;
+  box-sizing: inherit;
+  margin: 0;
 }
