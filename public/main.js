@@ -1,4 +1,6 @@
+// main.js
 // this is a js module (> es6)
+
 const target = document.getElementById("target");
 
 async function fetchData() {
@@ -13,22 +15,22 @@ async function fetchData() {
   if (!contentType || !contentType.includes("text/plain")) {
     throw new TypeError("content-type is not text/plain");
   }
-  return true;
+  return response.text();
 }
 
 async function renderData(data) {
-  console.trace();
-  console.log(data);
+  target.innerText = data.ok ?? data.notOk;
 }
 
 async function main() {
+  let data = {};
   try {
-    await fetchData();
+    data.ok = await fetchData();
   } catch (error) {
+    data.notOk = error;
     console.log(error);
   }
-  console.trace();
-  await renderData();
+  await renderData(data);
 }
 
 main();
