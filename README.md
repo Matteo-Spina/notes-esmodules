@@ -1,2 +1,7 @@
 # static-deployment
-Learn how to manage static deployment with Vercel
+
+Learning to manage static deployment with Vercel
+
+### todos
+
+
