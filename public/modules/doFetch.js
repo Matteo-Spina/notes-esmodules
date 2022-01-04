@@ -1,6 +1,5 @@
 // doFetch.js
 // js module (es > 6)
-let dataToExport;
 async function fetchData() {
   // check for a successful fecth, can throws error
   const data = {};
@@ -20,6 +19,8 @@ async function fetchData() {
   data.ok = parsedRes;
   return data;
 }
+
+let dataToExport;
 try {
   dataToExport = await fetchData();
 } catch (error) {
