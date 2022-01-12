@@ -1,10 +1,10 @@
 # exclude everything
-/**
-# except everything inside
+*
+# except whitelisted
 !/api
 !/api/**/*
 !/public
 !/public/**/*
-# and
+
 !/*.?ignore
 !/*.json
