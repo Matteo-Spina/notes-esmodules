@@ -1,8 +1,10 @@
 # exclude everything
-*
+/**
 # except everything inside
-!/api/**
-!/public/**
+!/api
+!/api/**/*
+!/public
+!/public/**/*
 # and
-!*.?ignore
+!/*.?ignore
 !/*.json
