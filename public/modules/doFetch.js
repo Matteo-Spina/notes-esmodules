@@ -1,30 +1,29 @@
 // doFetch.js
 // js module (es > 6)
+
 async function fetchData() {
-  // check for a successful fecth, can throws error
-  const data = {};
-  const response = await fetch("/api/hello"); //
+  let response;
+  //
+  try {
+    response = await fetch("/api/hello");
+  } catch (err) {
+    throw new Error("fetch network error", { cause: err });
+  }
   // check response is within 200-299
   if (!response.ok) {
-    data.notOk = `response status: ${response.status}`;
-    return;
+    throw new Error(`bad response: response status: ${response.status}`);
   }
   // check some headers
   // data.contentType = response.headers.get("content-type");
   // if (!contentType || !contentType.includes("text/plain")) {
   //   data.notOk = `Content-Type is not `;
   // }
-  // parse response
-  const parsedRes = await response.text();
-  data.ok = parsedRes;
-  return data;
+  // await parse response here and return
+  try {
+    return await response.text();
+  } catch (err) {
+    throw new Error("error parsing response", { cause: err });
+  }
 }
 
-let dataToExport;
-try {
-  dataToExport = await fetchData();
-} catch (error) {
-  console.log("something went wrong");
-}
-
-export default dataToExport;
+export default fetchData;
