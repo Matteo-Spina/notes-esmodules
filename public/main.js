@@ -1,25 +1,42 @@
 // main.js
 // this is a js module (> es6)
 
+// imports are hoisted so
 // console.log("logged after import");
-// import importedData from "./modules/doFetch.js";
+import fetchData from "./modules/doFetch.js";
+
+// async
+fetchData()
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
 import { count, getCount, add1 } from "./modules/sub.js";
 
-const moduleA = document.getElementById("module-a");
-const targetA = moduleA.lastElementChild;
-// targetA.innerText = importedData.ok ?? importedData.notOk;
-targetA.innerText = `count: ${count}, getCount: ${getCount()}`;
+function getTarget(id) {
+  return document.querySelector(`#${id} samp`);
+}
 
+function updateText(target) {
+  target.innerText = `count: ${count}, getCount: ${getCount()}, alias: ${
+    alias ?? "⚠"
+  }`;
+}
+
+// display values as imported
+updateText(getTarget("module-a"));
+
+// modify values
 add1();
+updateText(getTarget("module-b"));
 
-const moduleB = document.getElementById("module-b");
-const targetB = moduleB.lastElementChild;
-targetB.innerText = `count: ${count}, getCount: ${getCount()}`;
-
+// import again just create another reference not a new instance of the value
 import { count as alias, add1 as plus1 } from "./modules/sub.js";
 plus1();
 
-const moduleC = document.getElementById("module-c");
-const targetC = moduleC.lastElementChild;
-targetC.innerText = `count: ${count}, alias: ${alias}, getCount: ${getCount()}`;
-console.assert(add1 === plus1);
+updateText(getTarget("module-c"));
+// count === alias
+console.assert(count === alias, "count !== alias");
