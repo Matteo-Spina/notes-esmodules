@@ -1,6 +1,8 @@
 # Sandbox: "*static-deployment*"
 
-Sandbox for:
+> ⚠ This repo is a sandbox, this also means that something could be a little messy 🍝.
+
+Main topics:
 
 - [ES modules](#es-modules)
 - [Yarn Pnp](#yarn)
@@ -9,14 +11,12 @@ Sandbox for:
 Other topics:
 
 - [Git](#git-workflow)
-  - GitHub pull request try
+  - trying GitHub pull request
   - git rebasing
 
-## Topics
+## Some notes on
 
 ### ES modules
-
-Some notes about ES modules
 
 #### `import` and `export` relies on live binding
 
@@ -60,7 +60,7 @@ instead do like this:
 >
 > *from: [V8 Blog - Top-level `await`](https://v8.dev/features/top-level-await)*
 
-⚠ *warning*: about directly export a value.
+⚠ *warning*: tla on exporting.
 
 The following code:
 
@@ -95,21 +95,19 @@ acts like the following:
 
 ### Yarn
 
+#### Issues
 
+- Prettier extension for VSCode needs Yarn Editor SDK so I followed [yarn docs](https://yarnpkg.com/getting-started/editor-sdks#editor-setup) which requires to:
 
-###### Issues
+  - install [ZipFS](https://marketplace.visualstudio.com/items?itemName=arcanis.vscode-zipfs) VSCode extension.
+  - run `yarn dlx @yarnpkg/sdks vscode`.
 
-Prettier extension for VSCode needs Yarn Editor SDK so I followed [yarn docs](https://yarnpkg.com/getting-started/editor-sdks#editor-setup) which requires to:
-
-- install [ZipFS](https://marketplace.visualstudio.com/items?itemName=arcanis.vscode-zipfs) VSCode extension.
-- run `yarn dlx @yarnpkg/sdks vscode`.
-
-Vercel CLI
+- Vercel CLI: `vercel dev` command not working, (unresolved atm)
 
 ### Deployment with Vercel
 
-des
+tbd
 
 ### Git workflow
 
-des
+tbd
