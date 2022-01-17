@@ -1,0 +1,7 @@
+# exclude everything
+*
+# except whitelisted
+!/api/*.js
+!/api/**/*.js
+!/public/*.js
+!/public/**/*.js
