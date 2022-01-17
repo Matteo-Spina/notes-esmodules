@@ -1,6 +1,6 @@
 # Sandbox: "*static-deployment*"
 
-> ⚠ This repo is a sandbox, this also means that something could be a little messy 🍝.
+> ⚠ This repo is a sandbox set up to try out code, report issues and collect notes about specific topics.
 
 Main topics:
 
@@ -33,7 +33,7 @@ you can't do:
   
   // main.js
   import { count } from './module.js';
-  count++; // error: count is read-only from main.js
+  count++; // error: count is read-only when imported
 ```
 
 instead do like this:
@@ -64,25 +64,25 @@ instead do like this:
 
 The following code:
 
-```js
-  // module.js
+```javascript
+// module.js
   export default await aPromise; // ⚠ you are exporting the result of awaiting
   
-  // main.js
+// main.js
   import something from './module.js'; 
   // ⚠ you import the fulfilled value of the promise
   // read as: 
-  import { default as something from '...}
+  import { default as something } from './module.js';
 ```
 
 acts like the following:
 
-```js
-  // module.js
+```javascript
+// module.js
   const aValue = await aPromise;
   export default aValue;
 
-  // main.js
+// main.js
   import aValue from './module.js';
 ```
 
