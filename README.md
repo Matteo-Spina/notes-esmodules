@@ -6,7 +6,7 @@ Main topics:
 
 - [ES modules](#es-modules)
 - [Yarn Pnp](#yarn)
-- [Vercel deployment](#vercel-deploy)
+- [Vercel deployment](#deployment-with-vercel)
 
 Other topics:
 
