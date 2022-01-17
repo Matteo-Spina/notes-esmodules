@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["eslint", "npm:8.7.0"],
+            ["eslint-config-prettier", "virtual:bb0d186c0b12ef7471f8a7872b4ba80e333e8a580f5bc03aaf2d04709502398ab28345b2a4b5eda3e52965bf39268a7cb6c3d51f38e1e98b5c58d39a602ced78#npm:8.3.0"],
             ["prettier", "npm:2.5.1"],
             ["vercel", "npm:23.1.2"]
           ],
@@ -635,6 +636,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strip-json-comments", "npm:3.1.1"],
             ["text-table", "npm:0.2.0"],
             ["v8-compile-cache", "npm:2.3.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["eslint-config-prettier", [
+        ["npm:8.3.0", {
+          "packageLocation": "./.yarn/cache/eslint-config-prettier-npm-8.3.0-f540cd1f53-df4cea3032.zip/node_modules/eslint-config-prettier/",
+          "packageDependencies": [
+            ["eslint-config-prettier", "npm:8.3.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:bb0d186c0b12ef7471f8a7872b4ba80e333e8a580f5bc03aaf2d04709502398ab28345b2a4b5eda3e52965bf39268a7cb6c3d51f38e1e98b5c58d39a602ced78#npm:8.3.0", {
+          "packageLocation": "./.yarn/__virtual__/eslint-config-prettier-virtual-e79ca8dc43/0/cache/eslint-config-prettier-npm-8.3.0-f540cd1f53-df4cea3032.zip/node_modules/eslint-config-prettier/",
+          "packageDependencies": [
+            ["eslint-config-prettier", "virtual:bb0d186c0b12ef7471f8a7872b4ba80e333e8a580f5bc03aaf2d04709502398ab28345b2a4b5eda3e52965bf39268a7cb6c3d51f38e1e98b5c58d39a602ced78#npm:8.3.0"],
+            ["@types/eslint", null],
+            ["eslint", "npm:8.7.0"]
+          ],
+          "packagePeers": [
+            "@types/eslint",
+            "eslint"
           ],
           "linkType": "HARD",
         }]
@@ -1562,6 +1585,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["static-deployment", "workspace:."],
             ["eslint", "npm:8.7.0"],
+            ["eslint-config-prettier", "virtual:bb0d186c0b12ef7471f8a7872b4ba80e333e8a580f5bc03aaf2d04709502398ab28345b2a4b5eda3e52965bf39268a7cb6c3d51f38e1e98b5c58d39a602ced78#npm:8.3.0"],
             ["prettier", "npm:2.5.1"],
             ["vercel", "npm:23.1.2"]
           ],
