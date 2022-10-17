@@ -1,4 +1,4 @@
-# Sandbox: "*static-deployment*"
+# Notes on ES Modules
 
 > ⚠ This repo is a sandbox set up to try out code, report issues and collect notes about specific topics.
 
@@ -6,7 +6,7 @@ Main topics:
 
 - [ES modules](#es-modules)
 - [Yarn Pnp](#yarn)
-- [Vercel deployment](#deployment-with-vercel)
+- ~~Vercel deployment~~
 
 Other topics:
 
